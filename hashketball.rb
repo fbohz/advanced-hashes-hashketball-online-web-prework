@@ -222,13 +222,13 @@ def player_numbers(team)
          player_data.each do |this_pl_k, this_pl_data|
          if this_pl_k == :number        
          team_numbers << this_pl_data
+                end
+              end
+            end
+          end
         end
-        end
-      end
-      end
-      end
+      end   
     end   
-  end   
- end
-team_numbers.sort
+  end
+  team_numbers.sort
 end
