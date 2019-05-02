@@ -211,7 +211,7 @@ def team_names
   end 
   
 def player_numbers(team)
- team_numbers = []
+ jersey_numbers = []
   game_hash.each do |key, teams|
     teams.each do |team_keys, team_data|
       if team_data == team
@@ -220,7 +220,7 @@ def player_numbers(team)
          this_team_data.each do |player_name, player_data|
          player_data.each do |this_pl_k, this_pl_data|
          if this_pl_k == :number        
-         team_numbers << this_pl_data
+         jersey_numbers << this_pl_data
                 end
               end
             end
@@ -229,5 +229,5 @@ def player_numbers(team)
       end   
     end   
   end
-  team_numbers.sort
+  jersey_numbers.sort
 end
