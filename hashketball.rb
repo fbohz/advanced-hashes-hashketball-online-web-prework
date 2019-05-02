@@ -238,7 +238,7 @@ def player_stats(name)
       if team_keys == :players
         team_data.keys.each do |player_names|
           if player_names == name
-            puts team_data[name]
+            return team_data[name]
           end
         end
       end
