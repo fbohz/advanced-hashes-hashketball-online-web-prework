@@ -232,4 +232,18 @@ def player_numbers(team)
   jersey_numbers.sort
 end
 
-player_stats(name)
+def player_stats(name)
+   game_hash.each do |key, teams|
+    teams.each do |team_keys, team_data|
+      if team_keys == :players
+        team_data.keys.each do |player_names|
+          if player_names == name
+            puts team_data[name]
+          end
+        end
+      end
+    end
+  end 
+end     
+  
+  
