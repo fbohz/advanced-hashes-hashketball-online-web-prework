@@ -239,6 +239,6 @@ def player_numbers(team)
   end 
   #puts team_numbers
  end
-     team_numbers.sort.to_s
+     team_numbers.sort
 
 end
