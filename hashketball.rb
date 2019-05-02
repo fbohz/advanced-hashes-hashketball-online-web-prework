@@ -211,33 +211,24 @@ def team_names
   end 
   
 def player_numbers(team)
- team_key = nil
  team_numbers = []
   game_hash.each do |key, teams|
-
     teams.each do |team_keys, team_data|
-    #puts team_keys
       if team_data == team
-      #puts teams
-        team_key = key
-       
-        
-        teams.each do |x, y|
-         if y.is_a?(Hash)
-          puts "y test"
-         y.each do |a, b|
-         puts "now b test"
-         b.each do |k, v|
-         if k == :number        
-         team_numbers << v
+        #team_key = key    
+        teams.each do |this_team_k, this_team_data|
+         if this_team_data.is_a?(Hash)
+         this_team_data.each do |player_name, player_data|
+         player_data.each do |this_pl_k, this_pl_data|
+         if this_pl_k == :number        
+         team_numbers << this_pl_data
         end
         end
       end
       end
       end
-    end
-  end 
-  #puts team_numbers
+    end   
+  end   
  end
      team_numbers.sort
 
