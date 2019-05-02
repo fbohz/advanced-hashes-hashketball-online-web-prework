@@ -215,7 +215,6 @@ def player_numbers(team)
   game_hash.each do |key, teams|
     teams.each do |team_keys, team_data|
       if team_data == team
-        #team_key = key    
         teams.each do |this_team_k, this_team_data|
          if this_team_data.is_a?(Hash)
          this_team_data.each do |player_name, player_data|
