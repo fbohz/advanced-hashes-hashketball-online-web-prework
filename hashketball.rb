@@ -231,3 +231,5 @@ def player_numbers(team)
   end
   jersey_numbers.sort
 end
+
+player_stats(name)
