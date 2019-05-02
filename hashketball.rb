@@ -210,7 +210,7 @@ def team_names
     return names
   end 
   
-def player_numbers
+def player_numbers(team)
  team_key = nil
  team_numbers = []
   game_hash.each do |key, teams|
