@@ -209,7 +209,7 @@ def team_names
     end
     return names
   end 
-  
+
 def player_numbers(team)
  jersey_numbers = []
   game_hash.each do |key, teams|
@@ -232,6 +232,7 @@ def player_numbers(team)
   jersey_numbers.sort
 end
 
+#basically a modified shoe_size method 
 def player_stats(name)
    game_hash.each do |key, teams|
     teams.each do |team_keys, team_data|
