@@ -255,18 +255,13 @@ def big_shoe_rebounds
     teams.each do |team_keys, team_data|
       if team_data.is_a?(Hash)
       team_data.each do |this_pl_k, this_pl_data|
-      #puts this_pl_k
         if this_pl_data.is_a?(Hash)
-          #puts this_pl_data
           this_pl_data.each do |stats_k, stats_d|
           if stats_k == :shoe
-          #puts stats_d
               if biggest_shoe == nil || stats_d > biggest_shoe
               biggest_shoe = stats_d
               biggest_name = this_pl_k
               this_key = key
-                #puts biggest_shoe
-                #puts biggest_name                
             end 
           end
           end
@@ -274,8 +269,6 @@ def big_shoe_rebounds
         end
       end
     end
-    #return names
   end 
   return game_hash[this_key][:players][biggest_name][:rebounds]
-  #puts game_hash[:home][:players]["Mason Plumlee"][:rebounds]
  end    
